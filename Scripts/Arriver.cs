@@ -23,6 +23,7 @@ public class Arriver : Kinematic
     protected override void Update()
     {
         steeringUpdate = new SteeringOutput();
+        steeringUpdate.linear = myMoveType.getSteering().linear;
         steeringUpdate.angular = myRotateType.getSteering().angular;
         base.Update();
     }
